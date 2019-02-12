@@ -1,0 +1,46 @@
+<!doctype html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <title>6.3 Одновременная и последовательная анимация</title>
+  <style>
+     #anime, .animeEl, #animeConsecutively, .animeConsecutivelyEl  {
+ padding:25px;
+ margin:10px;
+ border:2px solid #0C6;
+ background-color:#FF9831;
+ width:200pх;
+ }
+    #cont {
+ padding:25pх;
+ margin:10pх;
+ background-color:#B6DADA;
+ width:270pх;
+ float:left;
+ }
+ </style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+ <script>
+    window.onload = function () {
+	    $('#anime').click(function() {
+        $(".animeEl").animate({ width:"-=50", height: "200px", borderWidth:"7px"},5000)}
+        );
+        $('#animeConsecutively').click(function() {
+        $(".animeConsecutivelyEl").animate({ width:"-=50", borderWidth:"7px"},5000)
+       .animate({ height: "200px"},5000)
+       .fadeTo(400,0.2)
+    });
+}
+ </script>
+</head>
+ <body>
+    <div id='cont'>
+        <div id='anime'>Одновременная анимация </div>
+        <div class='animeEl'></div>
+    </div>
+    <div id='cont'>
+        <div id='animeConsecutively'>Последовательная анимация</div>
+        <div class='animeConsecutivelyEl'></div>
+    </div>
+ </body>
+</html>

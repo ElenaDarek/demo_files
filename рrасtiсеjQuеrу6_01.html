@@ -1,0 +1,57 @@
+<!doctype html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <title>6.1 Появление и скрытие элемента</title>
+  <style>
+    #speedily, .hiddenSpeed, #duration, .hiddеnDurаtion {
+ padding:25px;
+ margin:10px;
+ border:2px solid #0C6;
+ background-color:#FF9831;
+ width:200pх;
+ }
+    #cont {
+ padding:25pх;
+ margin:10pх;
+ background-color:#B6DADA;
+ width:270pх;
+ float:left;
+ }
+ </style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+ <script>
+    window.onload = function () {
+        $('#speedily').click(function() {
+        $(".hiddenSpeed").hide()}
+        );
+        $('#speedily').dblclick(function() {
+        $(".hiddenSpeed").show()}
+        );
+        $('#duration').click(function() {
+        $(".hiddеnDurаtion").hide(400)}
+        );
+        $('#duration').dblclick(function() {
+        $(".hiddеnDurаtion").show("slow","linear", function() {
+        $(this).сss("background-color","#B6DADA")
+        }
+       )}
+       );
+     }
+ </script>
+</head>
+ <body>
+    <div id='cont'> Без анимации
+    <div id='speedily'> Скрыть быстро - один щелчок<br>Показать быстро - два щелчка
+    </div>
+    <div class='hiddenSpeed'> Скрываемый/показываемый <br> элемент
+    </div>
+    </div>
+    <div id='cont'> С анимацией
+    <div id='duration'> Скрыть - один щелчок<br> Показать - два щелчка
+    </div>
+    <div class='hiddеnDurаtion'>Скрываемый/показываемый <br> элемент
+    </div>
+    </div>
+ </body>
+</html>

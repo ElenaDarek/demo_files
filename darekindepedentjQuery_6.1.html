@@ -1,0 +1,26 @@
+<!doctype html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <title> СР jquery 6.1.1.</title> 
+    <style>
+   div {
+   padding:25px; margin:10px; background-color:red; height:50px; width:50px; float:left;
+ }
+ </style>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        window.onload=function(){
+	        $('#slide').click(function () {
+            $('#slide').slideUp(2000);
+	        })
+	        $('#slide').click(function () {
+	        $('#slide').slideDown(2000);
+            })	
+        }	
+	</script>	
+  </head>
+  <body>
+    <div id="slide">Скрыть/раскрыть</div>
+  </body>
+</html>
